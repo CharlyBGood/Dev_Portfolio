@@ -3,7 +3,7 @@ import { WavesBackground } from './WavesBackground';
 export function HeroSection() {
   return (
     <header
-      className="px-6 py-16 md:py-32 h-screen relative overflow-hidden w-full bg-[#0c070f]"
+      className="px-6 py-16 md:py-32 h-screen relative overflow-hidden w-full bg-portfolio-deep"
     >
       <WavesBackground className="opacity-90" />
       <div className="container mx-auto max-w-4xl text-center relative z-10">
@@ -14,19 +14,19 @@ export function HeroSection() {
         <div className="flex justify-center gap-4">
           <a
             href="#expertise"
-            className="bg-[#1a0f20] hover:bg-[#2a1530] border border-[#3a2540] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
+            className="bg-portfolio-base hover:bg-portfolio-medium border border-portfolio-accent text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
           >
             Technologías
           </a>
           <a
             href="#portfolio"
-            className="bg-[#1a0f20] hover:bg-[#2a1530] border border-[#3a2540] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
+            className="bg-portfolio-base hover:bg-portfolio-medium border border-portfolio-accent text-white px-6 py-3 rounded-lg font-medium transition-all duration-300"
           >
             Projectos
           </a>
           <a
             href="#contact"
-            className="bg-gradient-to-r from-[#2a1530] via-[#4a2560] to-[#6a3590] hover:from-[#3a2540] hover:via-[#5a3570] hover:to-[#7a45a0] text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
+            className="bg-gradient-to-r from-portfolio-medium via-portfolio-gradient-1 to-portfolio-gradient-3 hover:from-portfolio-accent hover:via-portfolio-gradient-2 hover:to-portfolio-gradient-4 text-white px-6 py-3 rounded-lg font-medium transition-all duration-300 shadow-lg hover:shadow-xl"
           >
             Contacto
           </a>

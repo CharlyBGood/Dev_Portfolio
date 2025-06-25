@@ -11,7 +11,7 @@ import { SkillCard } from "./SkillCard";
 
 export function SkillCardsContainer() {
   return (
-    <section className="py-20 bg-[#150a1a]" id="expertise">
+    <section className="py-20 bg-portfolio-dark" id="expertise">
       <div className="container mx-auto px-6">
         <h2 className="text-3xl font-bold text-center mb-16">
           Tech-Stack & Herramientas

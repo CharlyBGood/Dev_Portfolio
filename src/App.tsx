@@ -6,7 +6,7 @@ import { ContactSection } from "./components/ContactSection";
 
 function App() {
   return (
-    <div className="min-h-screen bg-[#0c070f] text-white">
+    <div className="min-h-screen bg-portfolio-deep text-white">
       <HeroSection />
       <div className="section-divider-dark-to-light"></div>
       <SkillCardsContainer />

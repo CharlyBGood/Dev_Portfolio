@@ -39,19 +39,19 @@ export function WavesBackground({ className = "" }: WavesBackgroundProps) {
       className={`absolute bottom-0 left-0 w-full h-full ${className}`}
     >
       <defs>
-        {/* Gradiente principal con más sutileza */}
-        <linearGradient id="gradCian" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="rgba(51,204,255,0.03)" />
-          <stop offset="30%" stopColor="rgba(100,180,255,0.12)" />
-          <stop offset="70%" stopColor="rgba(150,160,255,0.08)" />
-          <stop offset="100%" stopColor="rgba(51,204,255,0.15)" />
+        {/* Gradiente principal con colores de la paleta */}
+        <linearGradient id="gradPortfolio" x1="0%" y1="0%" x2="100%" y2="0%">
+          <stop offset="0%" stopColor="var(--portfolio-deep)" stopOpacity="0.05" />
+          <stop offset="30%" stopColor="var(--portfolio-medium)" stopOpacity="0.15" />
+          <stop offset="70%" stopColor="var(--portfolio-gradient-1)" stopOpacity="0.12" />
+          <stop offset="100%" stopColor="var(--portfolio-gradient-3)" stopOpacity="0.18" />
         </linearGradient>
         
-        {/* Gradiente de sombra para profundidad */}
+        {/* Gradiente de sombra usando la paleta */}
         <linearGradient id="gradSombra" x1="0%" y1="0%" x2="100%" y2="0%">
-          <stop offset="0%" stopColor="rgba(20,10,30,0.4)" />
-          <stop offset="50%" stopColor="rgba(40,20,50,0.2)" />
-          <stop offset="100%" stopColor="rgba(20,10,30,0.3)" />
+          <stop offset="0%" stopColor="var(--portfolio-deep)" stopOpacity="0.6" />
+          <stop offset="50%" stopColor="var(--portfolio-base)" stopOpacity="0.4" />
+          <stop offset="100%" stopColor="var(--portfolio-deep)" stopOpacity="0.5" />
         </linearGradient>
       </defs>
       
@@ -61,7 +61,7 @@ export function WavesBackground({ className = "" }: WavesBackgroundProps) {
       </g>
       
       {/* Capa principal de luces */}
-      <g stroke="url(#gradCian)" strokeWidth="0.5" fill="none">
+      <g stroke="url(#gradPortfolio)" strokeWidth="0.5" fill="none">
         {lines}
       </g>
     </svg>

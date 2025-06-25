@@ -1,6 +1,6 @@
 export function Footer() {
   return (
-    <footer className="py-8 text-center bg-slate-900 text-slate-400">
+    <footer className="py-8 text-center bg-[#0c070f] text-[#c8b8d8]">
       <p className="text-sm md:text-base">
         © 2025 | SinapsiaLab by Carlos Bonavita a.k.a{" "}
         <a

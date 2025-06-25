@@ -14,6 +14,7 @@ import { SiGithub } from "@icons-pack/react-simple-icons";
 import { SkillCard } from "./components/SkillCard";
 import { ProjectCard } from "./components/ProjectCard";
 import { SocialLink } from "./components/SocialLink";
+import { Footer } from "./components/Footer";
 
 function App() {
   return (
@@ -22,29 +23,29 @@ function App() {
       <header className="container mx-auto px-6 py-16 md:py-32 h-screen">
         <div className="max-w-4xl mx-auto text-center">
           <h1 className="text-4xl md:text-6xl font-bold mb-6 bg-clip-text text-transparent bg-gradient-to-r from-[#9f9ea0] 0% via-[#59549b] 50% to-[#0055ff] 100%">
-            Web & Salesforce Developer
+            SinapsiaLab
           </h1>
           <p className="text-xl md:text-2xl text-slate-300 mb-8">
-            Building powerful web applications and Salesforce solutions
+            Conexión de ideas, tecnología y creatividad
           </p>
           <div className="flex justify-center gap-4">
             <a
               href="#expertise"
               className="bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-lg font-medium transition"
             >
-              Technologies
+              Technologías
             </a>
             <a
               href="#portfolio"
               className="bg-slate-700 hover:bg-slate-600 text-white px-6 py-3 rounded-lg font-medium transition"
             >
-              Projects
+              Projectos
             </a>
             <a
               href="#contact"
               className="bg-gradient-to-r from-[#9f9ea0] 0% via-[#59549b] 50% to-[#0055ff] 100% hover:bg-blue-600 text-white px-6 py-3 rounded-lg font-medium transition"
             >
-              Get in Touch
+              Contacto
             </a>
           </div>
         </div>
@@ -53,7 +54,9 @@ function App() {
       {/* Skills Section */}
       <section className="py-20 bg-slate-950" id="expertise">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-16">Technologies & Tools</h2>
+          <h2 className="text-3xl font-bold text-center mb-16">
+            TechStacks & Herramientas
+          </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <SkillCard
               icon={<Layout className="w-8 h-8 text-blue-400" />}
@@ -93,7 +96,7 @@ function App() {
       <section id="portfolio" className="py-20">
         <div className="container mx-auto px-6">
           <h2 className="text-3xl font-bold text-center mb-16">
-            Featured Work
+            Proyectos Destacados
           </h2>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 max-w-6xl mx-auto">
             <ProjectCard
@@ -115,7 +118,7 @@ function App() {
       {/* Contact Section */}
       <section id="contact" className="py-20 bg-slate-950">
         <div className="container mx-auto px-6">
-          <h2 className="text-3xl font-bold text-center mb-16">Get in Touch</h2>
+          <h2 className="text-3xl font-bold text-center mb-16">Conactemos</h2>
           <div className="flex justify-center gap-8">
             <SocialLink
               href="https://github.com/CharlyBGood"
@@ -135,11 +138,7 @@ function App() {
           </div>
         </div>
       </section>
-
-      {/* Footer */}
-      <footer className="py-8 text-center text-slate-400">
-        <p>© 2024 | Built with React & Tailwind CSS</p>
-      </footer>
+      <Footer />
     </div>
   );
 }

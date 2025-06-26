@@ -1,7 +1,7 @@
 export function Footer() {
   return (
-    <footer className="py-8 text-center bg-portfolio-deep text-portfolio-text">
-      <p className="text-sm md:text-base">
+    <footer className="py-6 md:py-8 text-center bg-portfolio-deep text-portfolio-text px-4">
+      <p className="text-xs sm:text-sm md:text-base leading-relaxed">
         © 2025 | SinapsiaLab by Carlos Bonavita a.k.a{" "}
         <a
           href="https://www.charlybgood.com"

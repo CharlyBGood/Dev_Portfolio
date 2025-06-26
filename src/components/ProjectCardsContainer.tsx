@@ -3,12 +3,12 @@ import projects, { type Project } from "./utilities/projects.ts";
 
 export function ProjectCardsContainer() {
   return (
-    <section id="portfolio" className="py-20">
-      <div className="container mx-auto px-6">
-        <h2 className="text-3xl font-bold text-center mb-16">
+    <section id="portfolio" className="py-12 md:py-20">
+      <div className="container mx-auto px-4 md:px-6">
+        <h2 className="text-xl md:text-3xl font-bold text-center mb-6 md:mb-12">
           Proyectos Destacados
         </h2>
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto">
           {projects.map((project: Project) => (
             <ProjectCard
               key={project.id}

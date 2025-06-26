@@ -3,6 +3,7 @@ import { SkillCardsContainer } from "./components/SkillCardsContainer";
 import { ProjectCardsContainer } from "./components/ProjectCardsContainer";
 import { Footer } from "./components/Footer";
 import { ContactSection } from "./components/ContactSection";
+import { ScrollNavigation } from "./components/ScrollNavigation";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
       <ContactSection />
       <div className="section-divider-light-to-dark"></div>
       <Footer />
+      <ScrollNavigation />
     </div>
   );
 }

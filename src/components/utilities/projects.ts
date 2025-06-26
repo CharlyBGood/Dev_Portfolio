@@ -39,7 +39,7 @@ const projects: Project[] = [
   {
     id: 3,
     image:
-      "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1750824623/d60569b6-6e74-48db-861f-c8aea09d47bb.png",
+      "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1750881465/902fae94-b60e-4761-916b-780ffd735b3a.png",
     title: "Asegurando Online",
     description:
       "Sitio web personalizado para Maschio y Asociados, enfocado en llamada a la acción (CTA) con Integración de chatbot para atención al cliente y generación de leads.",

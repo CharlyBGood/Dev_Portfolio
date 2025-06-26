@@ -4,25 +4,49 @@ import { useState, useEffect } from "react";
 export function ScrollNavigation() {
   const [isAtTop, setIsAtTop] = useState(true);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMobile, setIsMobile] = useState(false);
 
   useEffect(() => {
+    const checkScreenSize = () => {
+      setIsMobile(window.innerWidth < 768); // md breakpoint
+    };
+
     const checkScrollPosition = () => {
       const scrollTop = window.pageYOffset;
       const windowHeight = window.innerHeight;
       const documentHeight = document.documentElement.scrollHeight;
-      
+
       // Determinar si está en la parte superior
       setIsAtTop(scrollTop < 100);
-      
-      // Mostrar botón después de un poco de scroll
-      setIsVisible(scrollTop > 200 || scrollTop + windowHeight < documentHeight - 100);
+
+      // Mostrar botón solo en desktop y después de scroll considerable
+      // No mostrar si está en mobile o muy cerca del header
+      setIsVisible(
+        !isMobile && 
+        scrollTop > 300 && 
+        (scrollTop + windowHeight < documentHeight - 100)
+      );
     };
 
-    window.addEventListener('scroll', checkScrollPosition);
-    checkScrollPosition(); // Verificar posición inicial
+    // Verificar tamaño de pantalla inicial
+    checkScreenSize();
     
-    return () => window.removeEventListener('scroll', checkScrollPosition);
-  }, []);
+    // Listeners
+    window.addEventListener('scroll', checkScrollPosition);
+    window.addEventListener('resize', checkScreenSize);
+    
+    checkScrollPosition(); // Verificar posición inicial
+
+    return () => {
+      window.removeEventListener('scroll', checkScrollPosition);
+      window.removeEventListener('resize', checkScreenSize);
+    };
+  }, [isMobile]);
+
+  // No renderizar nada en mobile
+  if (isMobile) {
+    return null;
+  }
 
   const handleScroll = () => {
     if (isAtTop) {
@@ -41,7 +65,7 @@ export function ScrollNavigation() {
   };
 
   return (
-    <div className="fixed right-4 md:right-6 bottom-4 md:bottom-6 z-50">
+    <div className="fixed right-4 md:right-6 bottom-12 md:bottom-12 z-50">
       {/* Botón único que cambia de flecha */}
       <button
         onClick={handleScroll}
@@ -55,13 +79,13 @@ export function ScrollNavigation() {
         aria-label={isAtTop ? "Ir abajo" : "Volver arriba"}
       >
         {isAtTop ? (
-          <ChevronDown 
+          <ChevronDown
             className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:text-portfolio-text 
                        transition-all duration-200 group-hover:translate-y-0.5
                        group-active:translate-y-0"
           />
         ) : (
-          <ChevronUp 
+          <ChevronUp
             className="w-4 h-4 md:w-5 md:h-5 text-white group-hover:text-portfolio-text 
                        transition-all duration-200 group-hover:-translate-y-0.5
                        group-active:translate-y-0"

@@ -31,6 +31,7 @@
     @apply before:scale-x-0 hover:before:scale-x-100 before:origin-left before:transition-transform before:duration-300;
   }
 
+  /* Altura responsiva para WavesBackground */
   /* Gradientes de transición entre secciones */
   .section-divider-dark-to-light {
     background: linear-gradient(to bottom, var(--portfolio-deep) 0%, var(--portfolio-dark) 100%);

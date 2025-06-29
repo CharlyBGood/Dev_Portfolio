@@ -46,6 +46,26 @@ const projects: Project[] = [
     url: "https://asegurando.online/",
     tags: ["React", "TailwindCSS", "Cloudinary", "Chatbot Integration"],
   },
+  {
+    id: 4,
+    image:
+      "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751168366/5680e11c-0f48-44f0-a4a2-d531f918958b.png",
+    title: "Planificador Financiero",
+    description:
+      "Aplicación web para el seguimiento de gastos personales, con autenticación de usuario y almacenamiento en la nube.",
+    url: "https://expence-tracker-theta.vercel.app/",
+    tags: ["React", "TailwindCSS", "Firebase/Firestore", "Vercel","Google Auth", "Supabase" ],
+  },
+  {
+    id: 5,
+    image:
+      "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751169320/c90eb03b-baaa-45c8-a1ab-4fc26257c151.png",
+    title: "Cotizador Online",
+    description:
+      "Herramienta de cotización de productos de seguros, con carrito de compras.",
+    url: "https://stunning-toffee-a5e308.netlify.app/",
+    tags: ["React", "TailwindCSS", "Bolt.new", "Netlify"],
+  },
 ];
 
 export default projects;

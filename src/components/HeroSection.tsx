@@ -9,7 +9,7 @@ export function HeroSection() {
       <WavesBackground className="opacity-90" />
       <div className="container mx-auto max-w-4xl text-center relative z-10 pt-16 md:pt-24">
         <img 
-          src="https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751253449/SinapsiaLabBlancosvg_jbodfv.svg" 
+          src="https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751253826/SinapsiaLabThinBlanco_gfwi1j.svg" 
           className="m-auto object-contain mb-6 md:mb-8" 
           alt="SinapsiaLab Logo"
         />

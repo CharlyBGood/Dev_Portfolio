@@ -1,5 +1,5 @@
 import { WavesBackground } from './WavesBackground';
-import sinapsia from '../img/sinapsialab.png';
+// import sinapsia from '../img/sinapsialab.png';
 
 export function HeroSection() {
   return (
@@ -8,12 +8,12 @@ export function HeroSection() {
     >
       <WavesBackground className="opacity-90" />
       <div className="container mx-auto max-w-4xl text-center relative z-10 pt-16 md:pt-24">
-        {/* <img 
-          src="https://res.cloudinary.com/dr8pwzxzn/image/upload/v1750827212/sinapsia_y1shcw.svg" 
+        <img 
+          src="https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751252045/SinapsiaLabTransparente_lz8dej.png" 
           className="m-auto object-contain mb-6 md:mb-8" 
           alt="SinapsiaLab Logo"
-        /> */}
-        <img src={sinapsia} className="m-auto object-contain mb-6 md:mb-8" alt="SinapsiaLab Text" />
+        />
+        {/* <img src={sinapsia} className="m-auto object-contain mb-6 md:mb-8" alt="SinapsiaLab Text" /> */}
         <p className="text-lg md:text-xl lg:text-2xl text-slate-300 mb-6 md:mb-8 px-2">
           Conexión de ideas, tecnología y creatividad
         </p>

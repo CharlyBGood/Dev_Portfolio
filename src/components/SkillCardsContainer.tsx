@@ -11,9 +11,33 @@ import {
 
 export function SkillCardsContainer() {
   const [showModal, setShowModal] = useState(false);
+  const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
+  const [proyecto, setProyecto] = useState("");
+
+  const sendLead = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      await fetch("https://hook.us2.make.com/a7ypg574akz5k9enedo5k9za7bqbavmn", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre, email, proyecto }),
+      });
+      alert("¡Genial! En breve me contacto.");
+    } catch (err) {
+      console.error(err);
+      alert("Algo salió mal. Por favor intentá más tarde.");
+    } finally {
+      setShowModal(false);
+      setNombre("");
+      setEmail("");
+      setProyecto("");
+    }
+  };
+
   return (
     <section className="py-6 md:py-8 bg-portfolio-dark" id="expertise">
-      <div className="container mx-auto px-4 md:px-6">        
+      <div className="container mx-auto px-4 md:px-6">
         <div className="flex flex-col md:flex-row items-stretch gap-8 max-w-5xl mx-auto">
           {/* Lado izquierdo: Collage de íconos y descripción */}
           <div className="flex-1 bg-portfolio-base rounded-2xl shadow-2xl border border-portfolio-accent/20 flex flex-col items-center justify-center p-6 md:p-10">
@@ -26,26 +50,31 @@ export function SkillCardsContainer() {
               <Blocks className="w-10 h-10 text-pink-400" />
             </div>
             <p className="text-portfolio-text/80 text-center md:text-left">
-              Trabajo con tecnologías modernas como React, Node.js, Salesforce, MongoDB, automatizaciones, bots y más.
+              Trabajo con tecnologías modernas para diseñar, desarrollar y automatizar soluciones digitales, perzonalizadas y de alto rendimiento.
             </p>
           </div>
 
           {/* Lado derecho: Copy + CTA */}
           <div className="flex-1 flex flex-col justify-center items-center md:items-start bg-portfolio-base rounded-2xl shadow-2xl border border-portfolio-accent/20 p-6 md:p-10">
             <h4 className="text-2xl md:text-3xl font-bold mb-2 text-portfolio-gradient-1">
-              Soluciones reales
+              Transformá tu idea en resultados reales
             </h4>
-            <p className="mb-6 text-portfolio-text/90">
-              SinapsiaLab transforma tus ideas (o las de tu equipo) en herramientas digitales modernas y eficientes: Sitios web, ecommerce, apps internas, automatizaciones, chatbots, bots de redes sociales y más.
+            <p className="mb-4 text-portfolio-text/90">
+              Soluciones digitales modernas y efectivas: web, apps, herramientas para tu negocio, automatizaciones, chatbots y más.
             </p>
+            <ul className="mb-4 space-y-1">
+              <li>💥 Conseguí visibilidad y más clientes.</li>
+              <li>⏳ Ahorrá tiempo con automatizaciones.</li>
+              <li>🛠️ Servicio integral: desarrollo, despliegue en la nube y hosting gestionado.</li>
+            </ul>
             <button
               className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-6 py-3 rounded-full shadow-lg transition-all duration-300 text-lg mb-2"
               onClick={() => setShowModal(true)}
             >
-              Contame tu idea
+              Hablemos de tu proyecto
             </button>
             <span className="text-xs text-portfolio-accent/80 text-center md:text-left">
-              ¿Querés presupuesto estimativo? Completá el formulario y lo recibís por email, o escribime directo y lo charlamos.
+              ¿Querés un presupuesto estimativo? Completá el formulario y lo recibís por email, o escribime directo y lo charlamos.
             </span>
           </div>
         </div>
@@ -64,25 +93,25 @@ export function SkillCardsContainer() {
               <h5 className="text-lg font-bold mb-4">Presupuesto rápido</h5>
               <form
                 className="flex flex-col gap-4"
-                onSubmit={e => {
-                  e.preventDefault();
-                  setShowModal(false);
-                  // Aquí puedes agregar lógica de envío real
-                }}
+                onSubmit={sendLead}
               >
                 <input
-                  type="text"
+                  type="text" value={nombre}
+                  onChange={e => setNombre(e.target.value)}
                   placeholder="Tu nombre"
                   className="rounded px-3 py-2 border border-portfolio-accent/30 bg-portfolio-dark text-white"
                   required
                 />
                 <input
-                  type="email"
+                  type="email" value={email}
+                  onChange={e => setEmail(e.target.value)}
                   placeholder="Tu email"
                   className="rounded px-3 py-2 border border-portfolio-accent/30 bg-portfolio-dark text-white"
                   required
                 />
                 <textarea
+                  value={proyecto}
+                  onChange={e => setProyecto(e.target.value)}
                   placeholder="Contame tu idea o proyecto"
                   className="rounded px-3 py-2 border border-portfolio-accent/30 bg-portfolio-dark text-white"
                   rows={3}

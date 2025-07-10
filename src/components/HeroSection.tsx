@@ -7,7 +7,7 @@ export function HeroSection() {
       className="px-4 py-12 md:px-6 md:py-16 lg:py-32 h-screen relative overflow-hidden w-full bg-portfolio-deep"
     >
       <WavesBackground className="opacity-90" />
-      <div className="container mx-auto max-w-4xl text-center relative z-10 pt-16 md:pt-24">
+      <div className="container mx-auto max-w-4xl text-center relative z-10">
         <img 
           src="https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751256447/SinapsiaLabThinn8_lehxp5.png" 
           className="m-auto object-contain mb-6 md:mb-8" 

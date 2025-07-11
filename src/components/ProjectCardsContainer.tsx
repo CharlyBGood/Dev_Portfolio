@@ -3,7 +3,7 @@ import projects, { type Project } from "./utilities/projects.ts";
 
 export function ProjectCardsContainer() {
   return (
-    <section id="portfolio" className="py-12 md:py-20">
+    <section id="portfolio" className="">
       <div className="container mx-auto px-4 md:px-6">
         <h2 className="text-xl md:text-3xl font-bold text-center mb-6 md:mb-12">
           Proyectos Destacados

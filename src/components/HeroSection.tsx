@@ -43,16 +43,16 @@ export function HeroSection() {
     >
       <Navbar />
       <WavesBackground className="opacity-90" />
-      <div className="container mx-auto max-w-4xl text-center relative z-10 flex-1 flex flex-col justify-start items-center pt-2 md:pt-6">
+      <div className="container mx-auto max-w-4xl text-center relative z-10 flex-1 flex flex-col justify-evenly items-center pt-2 md:pt-6">
         <img
           src="https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751256447/SinapsiaLabThinn8_lehxp5.png"
-          className="m-auto object-contain mb-2 md:mb-3 mt-0"
+          className="object-contain"
           alt="SinapsiaLab Logo"
         />
-        <p className="text-lg md:text-xl lg:text-2xl text-slate-300 mb-2 md:mb-4 px-2">
+        <p className="text-lg md:text-xl lg:text-2xl text-slate-300 px-2">
           Conexión de ideas, tecnología y creatividad
         </p>
-        <div className="flex flex-nowrap gap-3 w-full overflow-x-auto scrollbar-none justify-center items-center mb-4 md:mb-5">
+        <div className="flex flex-nowrap gap-3 w-full overflow-x-auto scrollbar-none justify-center items-center">
           <Layout className="w-8 h-8 text-blue-400 shrink-0" />
           <Cloud className="w-8 h-8 text-emerald-400 shrink-0" />
           <Server className="w-8 h-8 text-purple-400 shrink-0" />
@@ -60,11 +60,11 @@ export function HeroSection() {
           <Code2 className="w-8 h-8 text-yellow-400 shrink-0" />
           <Blocks className="w-8 h-8 text-pink-400 shrink-0" />
         </div>
-        <p className="mb-4 md:mb-5 text-portfolio-text/90 text-sm md:text-base text-center break-words w-full">
-          En SinapsiaLab transformo tus ideas (o las de tu equipo) en herramientas digitales modernas y eficientes: desde sitios web, ecommerce y apps internas hasta automatizaciones, chatbots, bots sociales y más.
+        <p className="text-portfolio-text/90 text-sm md:text-base text-center break-words w-full">
+          Impulsa tu visibilidad online, o llevá a la realidad necesidades de tu negocio: desde sitios web, ecommerce y apps internas hasta automatizaciones, chatbots, bots sociales y más.
         </p>
         <button
-          className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-4 py-2 rounded-full shadow transition-all duration-300 text-sm mb-2 md:mb-3"
+          className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-4 py-2 rounded-full shadow transition-all duration-300 text-sm"
           onClick={() => setShowModal(true)}
         >
           Contame tu idea

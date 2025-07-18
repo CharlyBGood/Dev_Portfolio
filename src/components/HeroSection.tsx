@@ -13,6 +13,30 @@ import { useState } from "react";
 
 export function HeroSection() {
   const [showModal, setShowModal] = useState(false);
+  const [nombre, setNombre] = useState("");
+  const [email, setEmail] = useState("");
+  const [proyecto, setProyecto] = useState("");
+
+  const sendLead = async (e: React.FormEvent<HTMLFormElement>) => {
+    e.preventDefault();
+    try {
+      await fetch("https://hook.us2.make.com/a7ypg574akz5k9enedo5k9za7bqbavmn", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ nombre, email, proyecto }),
+      });
+      alert("¡Genial! En breve me contacto.");
+    } catch (err) {
+      console.error(err);
+      alert("Algo salió mal. Por favor intentá más tarde.");
+    } finally {
+      setShowModal(false);
+      setNombre("");
+      setEmail("");
+      setProyecto("");
+    }
+  };
+
   return (
     <header
       className="px-4 pt-12 md:pt-20 py-2 md:px-6 md:py-4 lg:py-6 min-h-screen flex flex-col relative overflow-hidden w-full bg-portfolio-deep"
@@ -20,9 +44,9 @@ export function HeroSection() {
       <Navbar />
       <WavesBackground className="opacity-90" />
       <div className="container mx-auto max-w-4xl text-center relative z-10 flex-1 flex flex-col justify-start items-center pt-2 md:pt-6">
-        <img 
-          src="https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751256447/SinapsiaLabThinn8_lehxp5.png" 
-          className="m-auto object-contain mb-2 md:mb-3 mt-0" 
+        <img
+          src="https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751256447/SinapsiaLabThinn8_lehxp5.png"
+          className="m-auto object-contain mb-2 md:mb-3 mt-0"
           alt="SinapsiaLab Logo"
         />
         <p className="text-lg md:text-xl lg:text-2xl text-slate-300 mb-2 md:mb-4 px-2">
@@ -65,22 +89,28 @@ export function HeroSection() {
                 onSubmit={e => {
                   e.preventDefault();
                   setShowModal(false);
-                  // Aquí puedes agregar lógica de envío real
+                  sendLead(e);
                 }}
               >
                 <input
                   type="text"
+                  value={nombre}
+                  onChange={(e) => setNombre(e.target.value)}
                   placeholder="Tu nombre"
                   className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
                   required
                 />
                 <input
                   type="email"
+                  value={email}
+                  onChange={(e) => setEmail(e.target.value)}
                   placeholder="Tu email"
                   className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
                   required
                 />
                 <textarea
+                  value={proyecto}
+                  onChange={(e) => setProyecto(e.target.value)}
                   placeholder="Contame tu idea o proyecto"
                   className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
                   rows={2}

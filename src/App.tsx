@@ -8,7 +8,6 @@ function App() {
   return (
     <div className="min-h-screen bg-portfolio-deep text-white">
       <HeroSection />
-      <div className="section-divider-light-to-dark"></div>
       <ProjectCardsContainer />
       <div className="section-divider-dark-to-light"></div>
       <ContactSection />

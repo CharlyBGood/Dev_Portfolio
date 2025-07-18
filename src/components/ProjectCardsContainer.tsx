@@ -8,7 +8,7 @@ export function ProjectCardsContainer() {
         <h2 className="text-xl md:text-3xl font-bold text-center mb-6 md:mb-12">
           Proyectos Destacados
         </h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 max-w-7xl mx-auto">
+        <div className="grid grid-cols-2 xs:grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-3 md:gap-6 max-w-7xl mx-auto">
           {projects.map((project: Project) => (
             <ProjectCard
               key={project.id}

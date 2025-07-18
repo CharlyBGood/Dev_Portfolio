@@ -1,10 +1,9 @@
 import { useState } from "react";
-import { Layers, FolderOpen, Mail} from "lucide-react";
+import { FolderOpen, Mail } from "lucide-react";
 import { Modal } from "./utilities/Modal";
 import { ContactSection } from "./ContactSection";
 
 const navLinks = [
-  { href: "#expertise", icon: <Layers className="w-5 h-5 md:w-6 md:h-6 text-white/90" aria-label="Tecnologías" />, type: "link" },
   { href: "#portfolio", icon: <FolderOpen className="w-5 h-5 md:w-6 md:h-6 text-white/90" aria-label="Proyectos" />, type: "link" },
   { icon: <Mail className="w-5 h-5 md:w-6 md:h-6 text-white/90" aria-label="Contacto" />, type: "modal" },
 ];
@@ -22,6 +21,7 @@ export function Navbar() {
                 href={link.href}
                 className="p-2 md:p-2.5 rounded-full font-medium bg-portfolio-base/70 hover:bg-portfolio-medium/80 border-none text-white shadow-sm transition-all duration-200 flex items-center justify-center"
                 aria-label={link.icon.props["aria-label"]}
+                title="Ir a sección"
               >
                 {link.icon}
               </a>
@@ -29,6 +29,7 @@ export function Navbar() {
               <button
                 key={"modal" + idx}
                 type="button"
+                title="Contactemos"
                 className="p-2 md:p-2.5 rounded-full font-medium bg-portfolio-base/70 hover:bg-portfolio-medium/80 border-none text-white shadow-sm transition-all duration-200 flex items-center justify-center"
                 aria-label={link.icon.props["aria-label"]}
                 onClick={() => setShowModal(true)}

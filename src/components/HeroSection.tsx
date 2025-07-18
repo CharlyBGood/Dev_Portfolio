@@ -9,33 +9,13 @@ import {
   Blocks,
 } from "lucide-react";
 import { useState } from "react";
+import { LeadGenerationForm } from "./utilities/LeadGenerationForm";
+import { Modal } from './utilities/Modal';
 // import sinapsia from '../img/sinapsialab.png';
 
 export function HeroSection() {
   const [showModal, setShowModal] = useState(false);
-  const [nombre, setNombre] = useState("");
-  const [email, setEmail] = useState("");
-  const [proyecto, setProyecto] = useState("");
-
-  const sendLead = async (e: React.FormEvent<HTMLFormElement>) => {
-    e.preventDefault();
-    try {
-      await fetch("https://hook.us2.make.com/a7ypg574akz5k9enedo5k9za7bqbavmn", {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nombre, email, proyecto }),
-      });
-      alert("¡Genial! En breve me contacto.");
-    } catch (err) {
-      console.error(err);
-      alert("Algo salió mal. Por favor intentá más tarde.");
-    } finally {
-      setShowModal(false);
-      setNombre("");
-      setEmail("");
-      setProyecto("");
-    }
-  };
+  const [showSuccess, setShowSuccess] = useState(false);
 
   return (
     <header
@@ -72,60 +52,31 @@ export function HeroSection() {
         <span className="text-[11px] text-portfolio-accent/80 text-center break-words w-full">
           ¿Querés presupuesto estimativo? Completá el formulario y lo recibís por email, o escribime directo y lo charlamos.
         </span>
-        {/* Modal simple (placeholder, puedes mejorarlo luego) */}
-        {showModal && (
-          <div className="fixed inset-0 bg-black/40 flex items-center justify-center z-50">
-            <div className="bg-portfolio-base rounded-xl p-4 shadow-2xl max-w-xs w-full relative">
-              <button
-                className="absolute top-2 right-2 text-portfolio-accent text-base"
-                onClick={() => setShowModal(false)}
-                aria-label="Cerrar"
-              >
-                ×
-              </button>
-              <h5 className="text-sm font-bold mb-2">Presupuesto rápido</h5>
-              <form
-                className="flex flex-col gap-1"
-                onSubmit={e => {
-                  e.preventDefault();
-                  setShowModal(false);
-                  sendLead(e);
-                }}
-              >
-                <input
-                  type="text"
-                  value={nombre}
-                  onChange={(e) => setNombre(e.target.value)}
-                  placeholder="Tu nombre"
-                  className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
-                  required
-                />
-                <input
-                  type="email"
-                  value={email}
-                  onChange={(e) => setEmail(e.target.value)}
-                  placeholder="Tu email"
-                  className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
-                  required
-                />
-                <textarea
-                  value={proyecto}
-                  onChange={(e) => setProyecto(e.target.value)}
-                  placeholder="Contame tu idea o proyecto"
-                  className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
-                  rows={2}
-                  required
-                />
-                <button
-                  type="submit"
-                  className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-3 py-1.5 rounded-full shadow transition-all duration-300 text-xs"
-                >
-                  Enviar
-                </button>
-              </form>
-            </div>
+        {/* Modal con LeadGenerationForm */}
+        <Modal
+          open={showModal}
+          onClose={() => setShowModal(false)}
+          className="max-w-lg w-full"
+        >
+          <LeadGenerationForm
+            onSuccess={() => {
+              setShowModal(false);
+              setShowSuccess(true);
+            }}
+          />
+        </Modal>
+        <Modal open={showSuccess} onClose={() => setShowSuccess(false)}>
+          <div className="flex flex-col items-center justify-center py-4">
+            <h5 className="text-base font-bold mb-2 text-portfolio-accent">¡Genial!</h5>
+            <p className="text-xs text-portfolio-text mb-2 text-center">En breve me contacto. ¡Gracias por tu interés!</p>
+            <button
+              className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-4 py-2 rounded-full shadow transition-all duration-300 text-sm mt-2"
+              onClick={() => setShowSuccess(false)}
+            >
+              Cerrar
+            </button>
           </div>
-        )}
+        </Modal>
       </div>
     </header>
   );

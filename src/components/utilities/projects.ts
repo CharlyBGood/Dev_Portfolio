@@ -54,7 +54,14 @@ const projects: Project[] = [
     description:
       "Aplicación web para el seguimiento de gastos personales, con autenticación de usuario y almacenamiento en la nube.",
     url: "https://expence-tracker-theta.vercel.app/",
-    tags: ["React", "TailwindCSS", "Firebase/Firestore", "Vercel","Google Auth", "Supabase" ],
+    tags: [
+      "React",
+      "TailwindCSS",
+      "Firebase/Firestore",
+      "Vercel",
+      "Google Auth",
+      "Supabase",
+    ],
   },
   {
     id: 5,
@@ -65,6 +72,16 @@ const projects: Project[] = [
       "Herramienta de cotización de productos de seguros, con carrito de compras.",
     url: "https://stunning-toffee-a5e308.netlify.app/",
     tags: ["React", "TailwindCSS", "Bolt.new", "Netlify"],
+  },
+  {
+    id: 6,
+    image:
+      "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1752506646/MiliFinalFinalFinalFinal_pkdza3.svg",
+    title: "Mily",
+    description:
+      "Aplicación web para registro de comidas y seguimiento alimenticio, con autenticación de usuario y almacenamiento en la nube.",
+    url: "https://mily-app-lyart.vercel.app/",
+    tags: ["NextJS", "TailwindCSS", "Vercel", "Supabase", "Google Auth"],
   },
 ];
 

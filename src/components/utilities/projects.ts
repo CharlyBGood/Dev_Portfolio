@@ -25,7 +25,7 @@ const projects: Project[] = [
     title: "Chatbot Widget Customizable",
     description:
       "Widget de chatbot personalizable, configurado para conectarse directamente con endpoint de backend para gestión de LLMs.",
-    url: "https://chatbotfrontend-tau.vercel.app/",
+    url: "https://chatty-three-kappa.vercel.app/",
     tags: [
       "Chatbot Widget",
       "LLMs Integration",

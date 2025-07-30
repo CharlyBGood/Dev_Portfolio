@@ -73,7 +73,7 @@ export function WavesBackground({ className = '' }: WavesBackgroundProps) {
       version="1.1"
       viewBox="0 0 1422 800"
       preserveAspectRatio="none"
-      className={`absolute bottom-0 left-0 w-full h-full ${className}`}
+      className={`absolute bottom-0 left-0 w-full ${className}`}
     >
       <defs>
         <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="oooscillate-grad">

@@ -4,7 +4,6 @@ export interface Project {
   title: string;
   description: string;
   url: string;
-  tags: string[];
 }
 
 const projects: Project[] = [
@@ -16,22 +15,15 @@ const projects: Project[] = [
     description:
       "Aplicación web para compartir recursos entre contactos. Autenticación de usuarios y almacenamiento en la nube.",
     url: "https://nostatenode.site/",
-    tags: ["React", "CSS", "Firebase/Firestore", "Google Auth/OAuth"],
   },
   {
     id: 2,
     image:
       "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1750824112/robot_dnipig.png",
-    title: "Chatbot Widget Customizable",
+    title: "Chatbot Widget",
     description:
       "Widget de chatbot personalizable, configurado para conectarse directamente con endpoint de backend para gestión de LLMs.",
     url: "https://chatty-three-kappa.vercel.app/",
-    tags: [
-      "Chatbot Widget",
-      "LLMs Integration",
-      "React/Vite",
-      "TailwindCSS",
-    ],
   },
   {
     id: 3,
@@ -41,14 +33,6 @@ const projects: Project[] = [
     description:
       "Landing Page para Maschio y Asociados con Integración de chatbot para atención al cliente y generación de leads.",
     url: "https://asegurando.online/",
-    tags: [
-      "React",
-      "TailwindCSS",
-      "Chatbot",
-      "LLMs Integration",
-      "NodeJS/Express",
-      "Google Cloud/Cloud Run",
-    ],
   },
   {
     id: 4,
@@ -58,7 +42,6 @@ const projects: Project[] = [
     description:
       "Aplicación web para gestión financiera, con autenticación de usuario y almacenamiento en la nube.",
     url: "https://expence-tracker-theta.vercel.app/",
-    tags: ["React/Vite", "TailwindCSS", "Google Auth", "Supabase"],
   },
   {
     id: 5,
@@ -68,7 +51,6 @@ const projects: Project[] = [
     description:
       "Herramienta de cotización de productos de seguros, con carrito de compras.",
     url: "https://stunning-toffee-a5e308.netlify.app/",
-    tags: ["React", "TailwindCSS", "TypeScript"],
   },
   {
     id: 6,
@@ -78,7 +60,6 @@ const projects: Project[] = [
     description:
       "Aplicación para registro y seguimiento alimenticio, con autenticación de usuario y almacenamiento en la nube.",
     url: "https://mily-app-lyart.vercel.app/",
-    tags: ["NextJS", "TailwindCSS", "Supabase", "Google Auth"],
   },
 ];
 

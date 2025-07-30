@@ -40,12 +40,12 @@ export function HeroSection() {
           <Code2 className="w-8 h-8 text-yellow-400 shrink-0" />
           <Blocks className="w-8 h-8 text-pink-400 shrink-0" />
         </div>
-        <h4 className="text-portfolio-text/90 text-sm md:text-base text-center break-words w-full mt-4">
-          Soluciones digitales a medida. Impulsa tu negocio.
+        <h4 className="text-portfolio-text/90 text-sm md:text-base text-center break-words w-full">
+          Soluciones digitales a medida.<br /> Impulsa tu negocio.
         </h4>
-        <p className="text-portfolio-text/90 text-sm md:text-base text-center break-words w-full">
-          {/* sitios web, apps, integraciones con IA y más. */}
-        </p>
+        {/* <p className="text-portfolio-text/90 text-sm md:text-base text-center break-words w-full">
+          sitios web, apps, integraciones con IA y más.
+        </p> */}
         <button
           className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-4 py-2 rounded-full shadow transition-all duration-300 text-sm"
           onClick={() => setShowModal(true)}

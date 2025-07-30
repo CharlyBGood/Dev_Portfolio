@@ -12,7 +12,7 @@ const projects: Project[] = [
     image:
       "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1750828268/horsey_pegjou.svg",
     title: "NoStateNode",
-    description: "App web - Compartir recursos entre contactos.",
+    description: "App web - Comparte recursos entre contactos.",
     url: "https://nostatenode.site/",
   },
   {

@@ -8,8 +8,8 @@ function App() {
     <div className="min-h-screen bg-portfolio-deep text-white">
       <HeroSection />
       <ProjectCardsContainer />
-      <div className="section-divider-dark-to-light"></div>
-      <div className="section-divider-light-to-dark"></div>
+      {/* <div className="section-divider-dark-to-light"></div>
+      <div className="section-divider-light-to-dark"></div> */}
       <Footer />
       <ScrollNavigation />
     </div>

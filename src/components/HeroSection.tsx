@@ -43,9 +43,9 @@ export function HeroSection() {
         <h4 className="text-portfolio-text/90 text-sm md:text-base text-center break-words w-full mt-4">
           Soluciones digitales a medida. Impulsa tu negocio.
         </h4>
-        {/* <p className="text-portfolio-text/90 text-sm md:text-base text-center break-words w-full">
-          sitios web, apps, automatizaciones, chatbots,  integraciones con IA y más.
-        </p> */}
+        <p className="text-portfolio-text/90 text-sm md:text-base text-center break-words w-full">
+          {/* sitios web, apps, integraciones con IA y más. */}
+        </p>
         <button
           className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-4 py-2 rounded-full shadow transition-all duration-300 text-sm"
           onClick={() => setShowModal(true)}
@@ -53,7 +53,7 @@ export function HeroSection() {
           Contame tu idea
         </button>
         <span className="text-[11px] text-portfolio-accent/80 text-center break-words w-full">
-          Recibí presupuesto estimativo por email, o escribime por <a href="https://wa.me/541136429294" target="_blank" rel="noopener noreferrer" className="underline text-green-400 font-semibold">WhatsApp</a>.
+          Recibí presupuesto por email, o escribime por <a href="https://wa.me/541136429294" target="_blank" rel="noopener noreferrer" className="underline text-green-400 font-semibold">WhatsApp</a>.
         </span>
         <Modal
           open={showModal}

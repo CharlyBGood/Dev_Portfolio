@@ -24,6 +24,7 @@ export function Navbar() {
                 title="Ir a sección"
               >
                 {link.icon}
+                proyectos
               </a>
             ) : (
               <button
@@ -34,7 +35,7 @@ export function Navbar() {
                 aria-label={link.icon.props["aria-label"]}
                 onClick={() => setShowModal(true)}
               >
-                {link.icon}
+                {link.icon}                
               </button>
             )
           )}

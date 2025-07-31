@@ -28,6 +28,7 @@ export function HeroSection() {
           src="https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751256447/SinapsiaLabThinn8_lehxp5.png"
           className="object-contain"
           alt="SinapsiaLab Logo"
+          loading='lazy'
         />
         <p className="text-lg md:text-xl lg:text-2xl text-slate-300 px-2">
           Conexión de ideas, tecnología y creatividad.
@@ -43,9 +44,6 @@ export function HeroSection() {
         <h4 className="text-portfolio-text/90 text-sm md:text-base text-center break-words w-full">
           Soluciones digitales a medida.<br /> Impulsa tu negocio.
         </h4>
-        {/* <p className="text-portfolio-text/90 text-sm md:text-base text-center break-words w-full">
-          sitios web, apps, integraciones con IA y más.
-        </p> */}
         <button
           className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-4 py-2 rounded-full shadow transition-all duration-300 text-sm"
           onClick={() => setShowModal(true)}

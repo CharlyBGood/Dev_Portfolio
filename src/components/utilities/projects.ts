@@ -20,7 +20,7 @@ const projects: Project[] = [
     id: 2,
     image:
       "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1750824112/robot_dnipig.png",
-    title: "Chatbot Widget",
+    title: "Chatbot",
     description: "Chatbot con IA.",
     url: "https://chatty-three-kappa.vercel.app/",
   },

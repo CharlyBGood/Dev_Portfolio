@@ -20,8 +20,7 @@ const projects: Project[] = [
     image:
       "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1750824112/robot_dnipig.png",
     title: "Chatbot Widget",
-    description:
-      "Chatbot con IA.",
+    description: "Chatbot con IA.",
     url: "https://chatty-three-kappa.vercel.app/",
   },
   {
@@ -29,8 +28,7 @@ const projects: Project[] = [
     image:
       "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1750881465/902fae94-b60e-4761-916b-780ffd735b3a.png",
     title: "Asegurando Online",
-    description:
-      "Maschio & Asociados - Landing Page.",
+    description: "Maschio & Asociados - Landing Page.",
     url: "https://asegurando.online/",
   },
   {
@@ -38,8 +36,7 @@ const projects: Project[] = [
     image:
       "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751168366/5680e11c-0f48-44f0-a4a2-d531f918958b.png",
     title: "Planificador Financiero",
-    description:
-      "App web gestión financiera.",
+    description: "App web gestión financiera.",
     url: "https://expence-tracker-theta.vercel.app/",
   },
   {
@@ -53,10 +50,10 @@ const projects: Project[] = [
   {
     id: 6,
     image:
-      "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1752506646/MiliFinalFinalFinalFinal_pkdza3.svg",
-    title: "Mily",
-    description: "Registro y seguimiento alimenticio.",
-    url: "https://mily-app-lyart.vercel.app/",
+      "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1756472152/9f3edee6-9482-4534-8688-d25c0a050919.png",
+    title: "Charly BGood",
+    description: "Sitio web -Charly BGood- | arte & creative code.",
+    url: "https://www.charlybgood.com/",
   },
 ];
 

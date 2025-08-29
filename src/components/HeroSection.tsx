@@ -5,8 +5,6 @@ import {
   Cloud,
   Database,
   Layout,
-  Server,
-  Blocks,
 } from "lucide-react";
 import { useState } from "react";
 import { LeadGenerationForm } from "./utilities/LeadGenerationForm";
@@ -24,24 +22,29 @@ export function HeroSection() {
       <Navbar />
       <WavesBackground className="top-0 md:bottom-0 absolute left-0 w-full h-[45vh] md:h-full" />
       <div className="container mx-auto max-w-4xl text-center relative z-10 flex-1 flex flex-col justify-evenly items-center pt-2 md:pt-6">
-        <img
-          src="https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751256447/SinapsiaLabThinn8_lehxp5.png"
-          className="object-contain"
-          alt="SinapsiaLab Logo"
-          loading='lazy'
-        />
-        <p className="text-lg md:text-xl lg:text-2xl text-slate-300 px-2">
+        <div className="flex flex-row items-center justify-center gap-2 p-2 w-[86%] md:w-[79%]">
+          <img
+            src="https://res.cloudinary.com/dr8pwzxzn/image/upload/v1753991068/creativesinapsistesterReal_qbe1zr.png" alt="sinapsialab brain"
+            className='object-contain w-[20%] md:w-[15%]'
+            loading='lazy'
+          />
+          <img
+            src="https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751256447/SinapsiaLabThinn8_lehxp5.png"
+            className="object-contain md:w-[79%] w-[93%]"
+            alt="SinapsiaLab Logo"
+            loading='lazy'
+          />
+        </div>
+        <p className="gradient-link text-sm md:text-xl lg:text-2xl px-2">
           Conexión de ideas, tecnología y creatividad.
         </p>
-        <div className="flex flex-nowrap gap-3 w-full overflow-x-auto scrollbar-none justify-center items-center">
+        <div className="flex flex-nowrap gap-5 w-full overflow-x-auto scrollbar-none justify-center items-center">
           <Layout className="w-8 h-8 text-blue-400 shrink-0" />
           <Cloud className="w-8 h-8 text-emerald-400 shrink-0" />
-          <Server className="w-8 h-8 text-purple-400 shrink-0" />
           <Database className="w-8 h-8 text-red-400 shrink-0" />
           <Code2 className="w-8 h-8 text-yellow-400 shrink-0" />
-          <Blocks className="w-8 h-8 text-pink-400 shrink-0" />
         </div>
-        <h4 className="text-portfolio-text/90 text-sm md:text-base text-center break-words w-full">
+        <h4 className="text-slate-300 text-sm md:text-base text-center break-words w-full">
           Soluciones digitales a medida.<br /> Impulsa tu negocio.
         </h4>
         <button

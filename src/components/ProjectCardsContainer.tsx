@@ -7,7 +7,7 @@ export function ProjectCardsContainer() {
       id="portfolio"
       className="w-full min-h-[auto] md:min-h-screen flex items-center justify-center"
     >
-      <div className="container mx-auto px-4 md:px-6">
+      <div className="container mx-auto px-4 md:px-6 w-full md:w-[86%]">
         <h2 className="text-xl md:text-3xl font-bold text-center mb-6 md:mb-6">
           Proyectos Destacados
         </h2>

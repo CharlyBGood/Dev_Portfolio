@@ -35,7 +35,7 @@ export function HeroSection() {
             loading='lazy'
           />
         </div>
-        <p className="gradient-link text-sm md:text-xl lg:text-2xl px-2">
+        <p className="gradient-link text-sm md:text-xl lg:text-2xl px-2 select-none">
           Conexión de ideas, tecnología y creatividad.
         </p>
         <div className="flex flex-nowrap gap-5 w-full overflow-x-auto scrollbar-none justify-center items-center">
@@ -44,16 +44,16 @@ export function HeroSection() {
           <Database className="w-8 h-8 text-red-400 shrink-0" />
           <Code2 className="w-8 h-8 text-yellow-400 shrink-0" />
         </div>
-        <h4 className="text-slate-300 text-sm md:text-base text-center break-words w-full">
+        <h4 className="text-slate-300 text-sm md:text-base text-center break-words w-full select-none">
           Soluciones digitales a medida.<br /> Impulsa tu negocio.
         </h4>
         <button
-          className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-4 py-2 rounded-full shadow transition-all duration-300 text-sm"
+          className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-4 py-2 rounded-full shadow transition-all duration-300 text-sm select-none"
           onClick={() => setShowModal(true)}
         >
           Contame tu idea
         </button>
-        <span className="text-[11px] text-portfolio-accent/80 text-center break-words w-full">
+        <span className="text-[11px] text-portfolio-accent/80 text-center break-words w-full select-none">
           Recibí presupuesto por email, o escribime por <a href="https://wa.me/541136429294" target="_blank" rel="noopener noreferrer" className="underline text-green-400 font-semibold">WhatsApp</a>.
         </span>
         <Modal

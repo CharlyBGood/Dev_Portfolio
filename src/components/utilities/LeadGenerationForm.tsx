@@ -7,7 +7,7 @@ interface LeadGenerationFormProps {
 export function LeadGenerationForm({ onSuccess }: LeadGenerationFormProps) {
   const [nombre, setNombre] = useState("");
   const [email, setEmail] = useState("");
-  const [proyecto, setProyecto] = useState("");
+  const [project, setProject] = useState("");
   const [loading, setLoading] = useState(false);
 
   const sendLead = async (e: React.FormEvent<HTMLFormElement>) => {
@@ -17,11 +17,11 @@ export function LeadGenerationForm({ onSuccess }: LeadGenerationFormProps) {
       await fetch("https://hook.us2.make.com/a7ypg574akz5k9enedo5k9za7bqbavmn", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ nombre, email, proyecto }),
+        body: JSON.stringify({ nombre, email, project }),
       });
       setNombre("");
       setEmail("");
-      setProyecto("");
+      setProject("");
       if (onSuccess) onSuccess();
     } catch (err) {
       console.error(err);
@@ -51,8 +51,8 @@ export function LeadGenerationForm({ onSuccess }: LeadGenerationFormProps) {
         required
       />
       <textarea
-        value={proyecto}
-        onChange={e => setProyecto(e.target.value)}
+        value={project}
+        onChange={e => setProject(e.target.value)}
         placeholder="Contame tu idea o proyecto"
         className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
         rows={2}

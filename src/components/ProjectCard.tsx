@@ -34,7 +34,7 @@ export function ProjectCard({
           <div className="flex flex-col justify-center h-full gap-2 p-2 md:p-3">
             <h3 className="text-xs md:text-base font-semibold mb-1 md:mb-1.5 gradient-link text-center">{title}</h3>
             <p className="text-xs text-portfolio-text text-center">{description}</p>
-            <h5 className="text-xs text-white text-center">Probá nuestro generador de sitios web.
+            <h5 className="text-[11px] text-portfolio-accent/80 text-center break-words w-full select-none">Probá nuestro generador de sitios web.
               <ArrowRight className="inline w-4 h-4 ml-2 text-portfolio-text" />
             </h5>
           </div>

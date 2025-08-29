@@ -6,7 +6,6 @@ export interface Project {
   url?: string;
   alt?: string;
   buttonText?: string;
-  // handleClick?; () => void;
 }
 
 const projects: Project[] = [

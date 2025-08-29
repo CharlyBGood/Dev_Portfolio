@@ -32,39 +32,43 @@ export function LeadGenerationForm({ onSuccess }: LeadGenerationFormProps) {
   };
 
   return (
-    <form className="flex flex-col gap-1" onSubmit={sendLead}>
-      <h5 className="text-sm font-bold mb-2">Presupuesto rápido</h5>
-      <input
-        type="text"
-        value={nombre}
-        onChange={e => setNombre(e.target.value)}
-        placeholder="Tu nombre"
-        className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
-        required
-      />
-      <input
-        type="email"
-        value={email}
-        onChange={e => setEmail(e.target.value)}
-        placeholder="Tu email"
-        className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
-        required
-      />
-      <textarea
-        value={project}
-        onChange={e => setProject(e.target.value)}
-        placeholder="Contame tu idea o proyecto"
-        className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
-        rows={2}
-        required
-      />
-      <button
-        type="submit"
-        className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-3 py-1.5 rounded-full shadow transition-all duration-300 text-xs"
-        disabled={loading}
-      >
-        {loading ? "Enviando..." : "Enviar"}
-      </button>
-    </form>
+    <section className="py-12 md:py-20 bg-portfolio-dark">
+      <div className="container mx-auto px-4 md:px-6">
+        <form className="flex flex-col gap-4 p-2" onSubmit={sendLead}>
+          <h5 className="text-sm font-bold mb-2">Presupuesto rápido</h5>
+          <input
+            type="text"
+            value={nombre}
+            onChange={e => setNombre(e.target.value)}
+            placeholder="Tu nombre"
+            className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
+            required
+          />
+          <input
+            type="email"
+            value={email}
+            onChange={e => setEmail(e.target.value)}
+            placeholder="Tu email"
+            className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
+            required
+          />
+          <textarea
+            value={project}
+            onChange={e => setProject(e.target.value)}
+            placeholder="Contame tu idea o proyecto"
+            className="rounded px-2 py-1 border border-portfolio-accent/30 bg-portfolio-dark text-white text-xs"
+            rows={2}
+            required
+          />
+          <button
+            type="submit"
+            className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-3 py-1.5 rounded-full shadow transition-all duration-300 text-xs"
+            disabled={loading}
+          >
+            {loading ? "Enviando..." : "Enviar"}
+          </button>
+        </form>
+      </div>
+    </section>
   );
 }

@@ -1,4 +1,4 @@
-import { Linkedin, Mail } from "lucide-react";
+import { Linkedin } from "lucide-react";
 import { SiGithub } from "@icons-pack/react-simple-icons";
 import { SocialLink } from "./SocialLink";
 
@@ -17,11 +17,6 @@ export function ContactSection() {
             href="https://linkedin.com/in/carlos-bonavita"
             icon={<Linkedin />}
             label="LinkedIn"
-          />
-          <SocialLink
-            href="mailto:bonavita.carlos@gmail.com"
-            icon={<Mail />}
-            label="Email"
           />
         </div>
       </div>

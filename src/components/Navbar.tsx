@@ -12,7 +12,6 @@ export function Navbar() {
   const [showModal, setShowModal] = useState(false);
   return (
     <nav className="fixed top-0 left-0 flex justify-between p-2 w-full z-50 bg-transparent backdrop-blur-md">
-
       {navLinks.map((link, idx) =>
         link.type === "link" ? (
           <a

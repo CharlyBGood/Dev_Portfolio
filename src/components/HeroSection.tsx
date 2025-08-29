@@ -54,12 +54,11 @@ export function HeroSection() {
           Contame tu idea
         </button>
         <span className="text-[11px] text-portfolio-accent/80 text-center break-words w-full select-none">
-          Recibí presupuesto por email, o escribime por <a href="https://wa.me/541136429294" target="_blank" rel="noopener noreferrer" className="underline text-green-400 font-semibold">WhatsApp</a>.
+          Recibí presupuesto por email, o hablemos por <a href="https://wa.me/541136429294" target="_blank" rel="noopener noreferrer" className="underline text-green-400 font-semibold">WhatsApp</a>.
         </span>
         <Modal
           open={showModal}
           onClose={() => setShowModal(false)}
-          className="max-w-lg w-full"
         >
           <LeadGenerationForm
             onSuccess={() => {
@@ -69,16 +68,18 @@ export function HeroSection() {
           />
         </Modal>
         <Modal open={showSuccess} onClose={() => setShowSuccess(false)}>
-          <div className="flex flex-col items-center justify-center py-4">
-            <h5 className="text-base font-bold mb-2 text-portfolio-accent">¡Genial!</h5>
-            <p className="text-xs text-portfolio-text mb-2 text-center">En breve me contacto. ¡Gracias por tu interés!</p>
-            <button
-              className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-4 py-2 rounded-full shadow transition-all duration-300 text-sm mt-2"
-              onClick={() => setShowSuccess(false)}
-            >
-              Cerrar
-            </button>
-          </div>
+          <section className="py-12 md:py-20 bg-portfolio-dark">
+            <div className="container mx-auto px-4 md:px-6">
+              <h5 className="text-xl md:text-3xl font-bold text-center mb-6 md:mb-16">¡Genial!</h5>
+              <p className="text-xs text-portfolio-text mb-2 text-center">En breve me contacto. ¡Gracias por tu interés!</p>
+              <button
+                className="bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-4 py-2 rounded-full shadow transition-all duration-300 text-sm mt-2"
+                onClick={() => setShowSuccess(false)}
+              >
+                Cerrar
+              </button>
+            </div>
+          </section>
         </Modal>
       </div>
     </header>

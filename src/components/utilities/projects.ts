@@ -10,10 +10,11 @@ const projects: Project[] = [
   {
     id: 1,
     image:
-      "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1750828268/horsey_pegjou.svg",
-    title: "NoStateNode",
-    description: "App web - Comparte recursos entre contactos.",
-    url: "https://nostatenode.site/",
+      "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1756475182/71be6b44-243c-4132-b5b1-861c90bd4813.png",
+    title: "Landing Flyer",
+    description:
+      "Landing Flyer - Creador de Landing Pages con editor y publicación automática.",
+    url: "https://landingflyer.sinapsialab.com",
   },
   {
     id: 2,
@@ -42,10 +43,10 @@ const projects: Project[] = [
   {
     id: 5,
     image:
-      "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1751169320/c90eb03b-baaa-45c8-a1ab-4fc26257c151.png",
-    title: "Cotizador Online",
-    description: "Cotización/carrito de compras.",
-    url: "https://stunning-toffee-a5e308.netlify.app/",
+      "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1750828268/horsey_pegjou.svg",
+    title: "NoStateNode",
+    description: "App web - Comparte recursos entre contactos.",
+    url: "https://nostatenode.site/",
   },
   {
     id: 6,

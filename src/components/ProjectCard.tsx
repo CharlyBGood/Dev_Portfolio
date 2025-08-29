@@ -14,7 +14,7 @@ export function ProjectCard({
   return (
     <div className="rounded-xl overflow-hidden bg-portfolio-base hover:bg-portfolio-medium border border-portfolio-accent hover:transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl">
       <a href={url} target="_blank" rel="noopener noreferrer" className="block">
-        <img src={image} alt={title} className="w-full h-16 sm:h-18 md:h-21 object-cover" />
+        <img src={image} alt={title} className="w-full h-[6em]  object-cover" />
         <div className="p-2 md:p-3">
           <h3 className="text-xs md:text-base font-semibold mb-1 md:mb-1.5 text-white">{title}</h3>
           <p className="text-portfolio-text mb-1 md:mb-2 text-[11px] md:text-sm line-clamp-3">{description}</p>

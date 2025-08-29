@@ -13,7 +13,8 @@ const projects: Project[] = [
       "https://res.cloudinary.com/dr8pwzxzn/image/upload/v1756475182/71be6b44-243c-4132-b5b1-861c90bd4813.png",
     title: "Landing Flyer",
     description:
-      "Landing Flyer - Creador de Landing Pages con editor y publicación automática.",
+      `Landing Flyer - Tu web profesional en horas por $150 USD. \n \n 
+      Diseño editable, hosting (1 año) + dominio opcional.`,
     url: "https://landingflyer.sinapsialab.com",
   },
   {

@@ -1,3 +1,5 @@
+import { ArrowRight } from "lucide-react";
+
 interface ProjectCardProps {
   id: number;
   image?: string;
@@ -13,8 +15,8 @@ export function ProjectCard({
   title,
   description,
   url,
-  buttonText
 }: ProjectCardProps) {
+
   return (
     <div className="rounded-xl overflow-hidden bg-portfolio-base hover:bg-portfolio-medium border border-portfolio-accent hover:transform hover:scale-[1.02] transition-all duration-300 shadow-lg hover:shadow-xl">
       {url ?
@@ -29,15 +31,12 @@ export function ProjectCard({
         </a>
         :
         <>
-          <div className="flex flex-col p-2 md:p-3">
-            <h3 className="text-xs md:text-base font-semibold mb-1 md:mb-1.5 gradient-link p-2 text-center">{title}</h3>
-            <p className="text-portfolio-text mb-1 md:mb-2 text-sm md:text-sm line-clamp-3">{description}</p>
-            <ul className="mb-2">
-              <li className="text-xs m-1 text-portfolio-text">- Visibilidad y conversión de clientes.</li>
-              <li className="text-xs m-1 text-portfolio-text">- Bots y automatizaciones.</li>
-              <li className="text-xs m-1 text-portfolio-text">- Sitios web, hosting y soporte.</li>
-            </ul>
-            <button className="mt-2 bg-portfolio-accent hover:bg-portfolio-gradient-2 text-white font-semibold px-4 py-1 rounded-full shadow transition-all duration-300 text-xs">{buttonText}</button>
+          <div className="flex flex-col justify-center h-full gap-2 p-2 md:p-3">
+            <h3 className="text-xs md:text-base font-semibold mb-1 md:mb-1.5 gradient-link text-center">{title}</h3>
+            <p className="text-xs text-portfolio-text text-center">{description}</p>
+            <h5 className="text-xs text-white text-center">Probá nuestro generador de sitios web.
+              <ArrowRight className="inline w-4 h-4 ml-2 text-portfolio-text" />
+            </h5>
           </div>
         </>
       }

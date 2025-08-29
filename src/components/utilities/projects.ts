@@ -12,7 +12,8 @@ export interface Project {
 const projects: Project[] = [
   {
     id: 1,
-    title: "Soluciones web con impacto real",    
+    title: "Soluciones creativas e innovadoras",
+    description: `Herramientas a la medida de tus necesidades.`,
     buttonText: "Obtener presupuesto",
   },
   {
